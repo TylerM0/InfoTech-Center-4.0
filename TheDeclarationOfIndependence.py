@@ -11,6 +11,8 @@ drivers know that the InfoTech Center 4.0 OS is loading
 #Import Libraries Here
 import time
 import sys
+import random
+from time import sleep
 
 print('\n\033[3;30;36m Welcome - InfoTechCenter 4.0')
 
@@ -29,10 +31,10 @@ while x != 20:
     if a == 4:
         a = 0
     if x == 20:
-        print('\n\n\033[3;31;36m Mission Accomplished - Retina Scanned - Access Granted!')
+        print('\n\n\033[3;31;36m Mission Accomplished - Retina Scanned - Access Granted!\n')
 timeToSleep = 2
 
-=======
+"""
 We will create a Function that will tell us our Fuel Gauge level
    - Create a List with Gas Levels
    - Randomize and choose from the list to determine our gas level
@@ -45,10 +47,6 @@ Create a Function to determine our gas level and closest gas station
    - Print Gas level
    - Print Closest Gas Station
 """
-
-# Import Libraries Here
-import random
-from time import sleep
 
 
 # Gas Level Function
@@ -94,4 +92,4 @@ def gasLevelAlert():
 
 
 gasLevelAlert()
->>>>>>> Gasoline
+
