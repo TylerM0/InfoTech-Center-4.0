@@ -3,7 +3,6 @@
 # Program: Infotech Center 4.0 - Gasoline
 
 """
-<<<<<<< HEAD
 Our Welcome Screen will start our Program letting
 drivers know that the InfoTech Center 4.0 OS is loading
 """
