@@ -1,6 +1,7 @@
 # Programmer: Tyler Mattson
-# Date: 1.30.2023
-# Program: Infotech Center 4.0 - Gasoline
+# Date Merged: 2.6.2023
+# Merged Welcome Screen and Gasoline
+
 
 """
 Our Welcome Screen will start our Program letting
@@ -32,6 +33,15 @@ while x != 20:
     if x == 20:
         print('\n\n\033[3;31;36m Mission Accomplished - Retina Scanned - Access Granted!\n')
 timeToSleep = 2
+
+
+
+
+
+
+# Programmer: Tyler Mattson
+# Date: 1.30.2023
+# Program: Infotech Center 4.0 - Gasoline
 
 """
 We will create a Function that will tell us our Fuel Gauge level
@@ -68,27 +78,80 @@ def gasLevelAlert():
     milesToGasStationLow = round(random.uniform(1, 25), 2)
     milesToGasStationQuarterTank = round(random.uniform(26, 50), 2)
     if gasLevelIndicator == "Empty":
-        print("***WARNING YOU ARE ON EMPTY***")
+        print("\n***WARNING YOU ARE ON EMPTY***")
         sleep(1)
         print("Calling Emergency Contact")
     elif gasLevelIndicator == "Low":
-        print("****Warning****")
+        print("\n****Warning****")
         sleep(1)
         print("Your gas tank is extremely low, checking Google Maps for the closest gas station.")
         sleep(1)
         print("The closest gas station is", listOfGasStations(), "which is", milesToGasStationLow, "miles away.")
     elif gasLevelIndicator == "Quarter Tank":
-        print("***Warning***")
+        print("\n***Warning***")
         sleep(1)
         print("Your gas tank is at a Quarter Tank and the closest gas station is", listOfGasStations(), "which is", milesToGasStationQuarterTank, ",miles away.")
     elif gasLevelIndicator == "Half Tank":
-        print("Your gas tank is at half of a tank full which is plenty of gas to make it to your destinations today.")
+        print("\nYour gas tank is at half of a tank full which is plenty of gas to make it to your destinations today.")
     elif gasLevelIndicator == "Three Quarter Tank":
-        print("Your gas tank is at three quarters of a tank which is plenty of gas to make it to your destinations today.")
+        print("\nYour gas tank is at three quarters of a tank which is plenty of gas to make it to your destinations today.")
     else:
-        print("Your gas tank is full which is plenty of gas to make it to your destinations today.")
+        print("\nYour gas tank is full which is plenty of gas to make it to your destinations today.")
 
 
 
+
+
+
+
+
+# Programmer: Tyler Mattson
+# Date: 2.8.2023
+# Program: Weather System Updates
+
+
+
+#Create weather conditions in a list and choose it randomly
+def weather():
+	weatherForcast = ["Snowing", "Blizzard", "Rain", "Foggy", "Wind", "Icy", "Sunshine"]
+	weatherCondition = random.choice(weatherForcast)
+	return weatherCondition
+
+# Variable to call weather() once in our VRS()
+weatherAlert = weather()
+
+
+
+# VRS() to respond to the weather condition
+def vehicleResponseSystem():
+	if weatherAlert == "Snowing":
+		print("\nNWS has changed your Alarm by 15 minutes because of the weather forecast of",weatherAlert)
+		print("VRS has been engaged only allowing your vehicle to go 45 MPH")
+	elif weatherAlert == "Blizzard":
+		print("\nNWS has changed your Alarm by 30 minutes because of the weather forecast of",weatherAlert)
+		print("VRS has been engaged only allowing your vehicle to go 35 MPH")
+	elif weatherAlert == "Rain":
+		print("\nNWS is calling for",weatherAlert,",please drive extra carefully.")
+	elif weatherAlert == "Foggy":
+		print("\nNWS is calling for",weatherAlert,"conditions, please drive extra carefully.")
+	elif weatherAlert == "Windy":
+		print("\nNWS is calling for",weatherAlert,"conditions, please drive extra carefully.")
+	elif weatherAlert == "Icy":
+		print("\nNWS has changed your Alarm by 50 minutes because of the weather forecast of",weatherAlert)
+		print("VRS has been engaged only allowing your vehicle to go 25 MPH")
+	else:
+		print("\nNWS is calling for",weatherAlert," drive safely and have a fantastic day!")
+
+
+
+
+
+
+# Call Function Here
+print("National Weather Service is checking conditions...")
+sleep(1)
+print("\nChecking current gas levels...")
+sleep(1)
+
+vehicleResponseSystem()
 gasLevelAlert()
-
