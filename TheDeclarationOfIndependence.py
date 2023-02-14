@@ -78,25 +78,25 @@ def gasLevelAlert():
     milesToGasStationLow = round(random.uniform(1, 25), 2)
     milesToGasStationQuarterTank = round(random.uniform(26, 50), 2)
     if gasLevelIndicator == "Empty":
-        print("***WARNING YOU ARE ON EMPTY***")
+        print("\n***WARNING YOU ARE ON EMPTY***")
         sleep(1)
         print("Calling Emergency Contact")
     elif gasLevelIndicator == "Low":
-        print("****Warning****")
+        print("\n****Warning****")
         sleep(1)
         print("Your gas tank is extremely low, checking Google Maps for the closest gas station.")
         sleep(1)
         print("The closest gas station is", listOfGasStations(), "which is", milesToGasStationLow, "miles away.")
     elif gasLevelIndicator == "Quarter Tank":
-        print("***Warning***")
+        print("\n***Warning***")
         sleep(1)
         print("Your gas tank is at a Quarter Tank and the closest gas station is", listOfGasStations(), "which is", milesToGasStationQuarterTank, ",miles away.")
     elif gasLevelIndicator == "Half Tank":
-        print("Your gas tank is at half of a tank full which is plenty of gas to make it to your destinations today.")
+        print("\nYour gas tank is at half of a tank full which is plenty of gas to make it to your destinations today.")
     elif gasLevelIndicator == "Three Quarter Tank":
-        print("Your gas tank is at three quarters of a tank which is plenty of gas to make it to your destinations today.")
+        print("\nYour gas tank is at three quarters of a tank which is plenty of gas to make it to your destinations today.")
     else:
-        print("Your gas tank is full which is plenty of gas to make it to your destinations today.")
+        print("\nYour gas tank is full which is plenty of gas to make it to your destinations today.")
 
 
 
@@ -148,6 +148,10 @@ def vehicleResponseSystem():
 
 
 # Call Function Here
+print("National Weather Service is checking conditions...")
+sleep(1)
+print("\nChecking current gas levels...")
+sleep(1)
 
 vehicleResponseSystem()
 gasLevelAlert()
