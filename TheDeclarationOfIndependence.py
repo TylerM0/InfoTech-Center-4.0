@@ -37,3 +37,39 @@ def vehicleResponseSystem():
 		print("\nNWS is calling for",weatherAlert," drive safely and have a fantastic day!")
 
 vehicleResponseSystem()
+
+
+
+
+
+
+# temp
+"""
+edit a bit
+def weatherTemp():
+    tempHot = round(random.uniform(50, 100))
+    tempCold = round(random.uniform(10, 40))
+    if weather == "Heavy Snow":
+        print("\nIt is",tempCold,"degrees outside")
+
+    elif weather == "Blizzard":
+        print("\nIt is",tempCold,"degrees outside")
+
+    elif weather == "Raining":
+        print("\nIt is",tempCold,"degrees outside")
+    elif weather == "Sunny":
+        print("\nIt is",tempHot,"degrees outside. "
+                                "A/C is ON")
+
+    elif weather == "Partly Cloudy":
+        print("\nIt is",tempHot,"degrees outside.")
+
+    elif weather == "Sleet":
+        print("\nIt is",tempCold,"degrees outside. "
+                                 "Heat is ON")
+
+
+    else:
+        print("\nIt is",tempHot,"degrees outside")
+
+"""
